@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Kashier</string>
+    <string name="searchbar_hint">Cari barang...</string>
+    <string name="save_button_label">Simpan</string>
+    <string name="total_price_label">Total Harga</string>
+    <string name="expand_desc">Expand/Collapse</string>
+    <string name="add_item">Add Item</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="selected_item_label">Barang terpilih</string>
+    <string name="all_item_label">Semua barang</string>
+    <string name="add_item_fab_label">Buat Barang</string>
+</resources>
