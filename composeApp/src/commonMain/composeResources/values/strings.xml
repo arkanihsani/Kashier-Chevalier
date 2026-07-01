@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Kashier</string>
+    <string name="searchbar_hint">Cari barang...</string>
+    <string name="save_button_label">Simpan</string>
+    <string name="delete_button_label">Hapus</string>
+    <string name="total_price_label">Total Harga</string>
+    <string name="expand_desc">Expand/Collapse</string>
+    <string name="add_item">Add Item</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="selected_item_label">Barang terpilih</string>
+    <string name="all_item_label">Semua barang</string>
+    <string name="add_item_fab_label">Buat Barang</string>
+    <string name="empty_item">Tidak ada barang.</string>
+    <string name="history_topbar">Riwayat Transaksi</string>
+    <string name="navigate_back">Kembali</string>
+    <string name="user_created">User successfully created: </string>
+    <string name="dismiss">Dismiss</string>
+    <string name="add_item_title">Tambah Barang</string>
+    <string name="edit_item_title">Edit Barang</string>
+    <string name="item_name_label">Nama barang</string>
+    <string name="item_name_placeholder">Beri nama barang</string>
+    <string name="item_price_label">Harga barang</string>
+    <string name="item_price_placeholder">Rp. 000,00</string>
+    <string name="register_user_data">Daftar Data Pengguna</string>
+    <string name="register_user_id_label">ID Pengguna</string>
+    <string name="register_user_id_placeholder">Pilih ID Unik kamu</string>
+    <string name="your_item_empty">Anda belum punya barang.</string>
+</resources>
