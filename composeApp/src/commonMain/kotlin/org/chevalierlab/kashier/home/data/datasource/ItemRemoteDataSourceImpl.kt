@@ -1,0 +1,51 @@
+package org.chevalierlab.kashier.home.data.datasource
+
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.request.get
+import io.ktor.client.request.post
+import io.ktor.client.request.setBody
+import org.chevalierlab.kashier.core.network.BASE_URL
+import org.chevalierlab.kashier.core.network.V1
+import org.chevalierlab.kashier.home.data.dto.ItemsItem
+import org.chevalierlab.kashier.home.data.dto.ItemsResponse
+import org.chevalierlab.kashier.home.data.dto.PostItemRequest
+
+class ItemRemoteDataSourceImpl(
+    private val client: HttpClient
+): ItemRemoteDataSource {
+    override suspend fun getItems(userId: String): Result<ItemsResponse> {
+        val response = client.get(urlString = "${BASE_URL}/$V1/item/$userId")
+        return when(response.status.value) {
+            200 -> Result.success(response.body())
+            else -> Result.failure(Exception(response.status.description))
+        }
+    }
+
+    override suspend fun postItem(request: PostItemRequest): Result<Boolean> {
+        val response = client.post("$BASE_URL/$V1/item") {
+            setBody(request)
+        }
+        return when (response.status.value) {
+            201 -> Result.success(response.body())
+            else -> Result.failure(Exception(response.status.description))
+        }
+    }
+
+    override suspend fun updateItem(
+        id: Int,
+        request: PostItemRequest
+    ): Result<Boolean> {
+        val response = client.post("$BASE_URL/$V1/item") {
+            setBody(request)
+        }
+        return when (response.status.value) {
+            200 -> Result.success(response.body())
+            else -> Result.failure(Exception(response.status.description))
+        }
+    }
+
+    override suspend fun deleteItem(id: Int): Result<Boolean> {
+        TODO("Not yet implemented")
+    }
+}
